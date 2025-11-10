@@ -1,0 +1,116 @@
+/* Stiluri globale pentru body, setând fundalul roz */
+body {
+  background-color: #fdf2f8; /* pink-50 */
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Containerul principal al jocului */
+.game {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  /* Bordura groasă pentru joc */
+  border: 6px solid #f472b6; /* pink-400 */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Containerul pentru tabla de joc */
+.game-board {
+  margin-right: 20px;
+}
+
+/* Stilul pentru un singur pătrat */
+.square {
+  background: #fff;
+  /* Bordură groasă pentru pătrate */
+  border: 4px solid #f9a8d4; /* pink-300 */
+  float: left;
+  /* Mărime font mai mare pentru emoji */
+  font-size: 48px;
+  font-weight: bold;
+  /* Mărimi ajustate pentru emoji */
+  line-height: 80px;
+  height: 80px;
+  width: 80px;
+  margin-right: -4px; /* Ajustat pentru bordura nouă */
+  margin-top: -4px;  /* Ajustat pentru bordura nouă */
+  padding: 0;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.square:hover {
+  background-color: #fef6fa; /* pink-50 la hover */
+}
+
+/* Evidențierea pătratelor câștigătoare */
+.square.winning {
+  background-color: #fbcfe8; /* pink-200 */
+  color: #c026d3; /* fuchsia-600 */
+}
+
+/* Mesajul de status (cine urmează, cine a câștigat) */
+.status {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #be185d; /* pink-700 */
+}
+
+/* Informațiile jocului (istoric) */
+.game-info {
+  margin-left: 20px;
+  min-width: 200px;
+}
+
+.game-info h3 {
+  color: #be185d; /* pink-700 */
+}
+
+.game-info ol {
+  padding-left: 20px;
+}
+
+.game-info li {
+  margin-bottom: 8px;
+}
+
+.game-info button {
+  background-color: #fce7f3; /* pink-100 */
+  border: 2px solid #f9a8d4; /* pink-300 */
+  color: #be185d; /* pink-700 */
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.game-info button:hover {
+  background-color: #fbcfe8; /* pink-200 */
+  border-color: #f472b6; /* pink-400 */
+}
+
+/* Stil pentru butonul de istoric selectat curent */
+.game-info button.current-move {
+  background-color: #ec4899; /* pink-500 */
+  color: white;
+  border-color: #ec4899; /* pink-500 */
+}
+
+/* Helper pentru rândurile tablei */
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
